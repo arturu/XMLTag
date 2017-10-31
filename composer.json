@@ -1,5 +1,5 @@
 {
-  "name": "arturu/XMLTag",
+  "name": "arturu/xml-tag",
   "description": "Convert PHP array to XML tag ",
   "minimum-stability": "dev",
   "license": "GPL v3.0",

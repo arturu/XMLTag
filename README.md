@@ -4,7 +4,7 @@ Convert PHP array to XML tag
 ## Installation
 
 ```
-composer require arturu/XMLTag --dev
+composer require arturu/xml-tag --dev
 ```
 
 ## Usage

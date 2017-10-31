@@ -12,7 +12,7 @@ namespace Arturu\XMLTag;
 
 /**
  * Class Element
- * @package Arturu\Laying
+ * @package Arturu\XMLTag
  */
 class Element
 {

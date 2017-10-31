@@ -11,7 +11,7 @@ composer require arturu/xml-tag --dev
 
 ```
 <?php
-use Arturu\XMLTag;
+use Arturu\XMLTag\Element;
 
 $tag = array(
     'type'=> 'div',

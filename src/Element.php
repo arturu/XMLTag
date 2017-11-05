@@ -21,14 +21,15 @@ class Element
      *  array(
      *    'type'=> 'tag',
      *    'attributes'=> array, // see self::attributes
-     *    'implicit'=> bool, // true for implicit
+     *    'injectTag' => 'Raw text' // inject raw text in to tag
+     *    'implicit'=> bool|'>', // true for implicit or text '>'
      *    'content' => string, // tag content
      *  )
      * @return string
      */
     public static function render(array $element)
     {
-        $elementType = $element['type'];
+        $elementType = (isset($element['type'])) ? $element['type'] : '';
 
         // open element
         $output = '<'.$elementType;
@@ -38,10 +39,15 @@ class Element
             $output .= ' ' . self::attributes($element['attributes']);
         }
 
+        // inject raw text
+        if ( isset($element['injectTag']) && $element['injectTag'] ) {
+            $output .= $element['injectTag'];
+        }
+
         // if implicit
-        if ( isset($element['implicit']) && $element['implicit'] ) {
+        if ( isset($element['implicit']) &&  $element['implicit'] ) {
             // out: <tag attr="value" ... />
-            return $output . ' />';
+            return $output . $element['implicit'];
         }
         // or not implicit
         else {

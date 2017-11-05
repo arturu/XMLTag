@@ -4,27 +4,28 @@ Convert PHP array to XML tag
 ## Installation
 
 ```
-composer require arturu/xml-tag --dev
+composer require arturu/xml-tag
 ```
 
-## Usage
-
+## Usage example
 ```
 <?php
 use Arturu\XMLTag\Element;
 
 $tag = array(
-    'type'=> 'div',
-    'attributes'=> array("id"=>"testId","class"=>"a b c",foo"=>"bar"),
-    'implicit'=> false, // true for implicit
-    'content' => "Test content", // tag content
+    'type'=> 'div', // optional
+    'attributes'=> array("id"=>"testId","class"=>"a b c",foo"=>"bar"), // optional
+    'injectTag' => false // optional, inject raw text in to tag
+    'implicit'=> false, // optional, closure implicit set text ' />'
+    'content' => "Test content", // optional
 );
 echo Element::render($tag);
 ```
-### Output
+Output
 ```
 <div id="testId" class="a b c" foo="bar">Test content</div>
 ```
+For more examples see: tests/ElementTest.php
 
 ## License
 GPL v3.0 - Read LICENSE file

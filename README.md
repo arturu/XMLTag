@@ -27,7 +27,7 @@ Output
 ```
 <div id="testId" class="a b c" foo="bar">Test content</div>
 ```
-For more examples see: tests/ElementTest.php
+See: tests/ElementTest.php for more examples 
 
 ## License
 GPL v3.0 - Read LICENSE file

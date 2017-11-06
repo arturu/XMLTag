@@ -1,5 +1,6 @@
 # XMLTag
 [![Build Status](https://travis-ci.org/arturu/XMLTag.svg?branch=master)](https://travis-ci.org/arturu/XMLTag)
+
 Convert PHP array to XML tag
 
 ## Installation
